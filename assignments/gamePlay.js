@@ -91,6 +91,7 @@ const setFirstPlayer = function(hero, villain) {
     } goes first!`;
 
     console.log(`Heads, ${hero.name} goes first!`);
+    // call hero move
     setTimeout(function() {
       heroMove(hero, villain);
     }, 5000);
