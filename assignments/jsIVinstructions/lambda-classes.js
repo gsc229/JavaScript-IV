@@ -26,12 +26,15 @@ class Instructor extends Person {
 
   calcGrade(student) {
     let addOrSubt = Math.ceil(Math.random() * 2);
-    console.log(addOrSubt);
-    if ((addOrSubt = 1)) {
-      return `${student.name}'s grade increases to ${(student.grade +=
-        (100 - student.grade) * Math.random())}`;
+    //console.log(`addOrSubt === ${addOrSubt}`);
+    if (addOrSubt === 1) {
+      return `${student.name}'s grade increases from ${
+        student.grade
+      } to ${(student.grade += (100 - student.grade) * Math.random())}`;
     } else {
-      return (student.grade -= (100 - student.grade) * Math.random());
+      return `${student.name}'s grade decreases from ${
+        student.grade
+      } to ${(student.grade -= (100 - student.grade) * Math.random())}`;
     }
   }
 }
